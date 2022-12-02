@@ -11,8 +11,7 @@
             height: 277px;
         }
         .auto-style2 {}
-        .auto-style3 {}
-    </style>
+        </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -20,7 +19,8 @@
             <h1>Tabuada</h1>
             <asp:DropDownList ID="DdBaseNumber" runat="server" CssClass="auto-style2" Height="16px" Width="150px"></asp:DropDownList>
             <asp:Button ID="BtSubmitBaseNumber" runat="server" OnClick="BtSubmitBaseNumber_Click" Text="Selecionar valor" />
-            <asp:ListBox ID="LbResult" runat="server" CssClass="auto-style3" Height="152px" Width="141px"></asp:ListBox>
+            <br />
+            <asp:ListBox ID="LbResult" runat="server" Height="205px" Width="141px"></asp:ListBox>
         </div>
     </form>
 </body>
