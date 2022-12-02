@@ -16,15 +16,34 @@ namespace WFTabuada
             tbResult = new Table();
         }
 
-
-        protected void Page_Load(object sender, EventArgs e)
+        private void LoadNumbers()
         {
-            if(!IsPostBack)
-            for(var i = 0; i <= 10; i++)
+            for (var i = 0; i <= 10; i++)
             {
                 DdBaseNumber.Items.Add(new ListItem(i.ToString()));
             }
+        }
+
+        private void LoadCalendars()
+        {
+            CalendCurrentDate.SelectedDate = DateTime.Today;
+            CalendCurrentDate.VisibleDate = CalendCurrentDate.SelectedDate;
+
+            CalendBirthDate.SelectedDate = new DateTime(1989, 12, 1);
+            CalendBirthDate.VisibleDate = CalendBirthDate.SelectedDate;
+        }
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!IsPostBack)
+            {
+                LoadNumbers();
+                LoadCalendars();
+            }
             
+
+            
+
         }
 
         protected void BtSubmitBaseNumber_Click(object sender, EventArgs e)
@@ -63,6 +82,13 @@ namespace WFTabuada
             }
 
             PhPlaceHolder.Controls.Add(tbResult);
+        }
+
+        protected void SubmitLifeTime_Click(object sender, EventArgs e)
+        {
+            LbResultMessage.Text = string.Empty;
+            var lifeTime = CalendCurrentDate.SelectedDate.Subtract(CalendBirthDate.SelectedDate);
+            LbResultMessage.Text = $"Você tem {lifeTime.Days} dias de vida.";
         }
     }
 }
