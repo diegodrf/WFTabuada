@@ -39,6 +39,7 @@ namespace WFTabuada
             {
                 LoadNumbers();
                 LoadCalendars();
+                DefaultMultiview.ActiveViewIndex = 0;
             }
             
 
@@ -89,6 +90,21 @@ namespace WFTabuada
             LbResultMessage.Text = string.Empty;
             var lifeTime = CalendCurrentDate.SelectedDate.Subtract(CalendBirthDate.SelectedDate);
             LbResultMessage.Text = $"Você tem {lifeTime.Days} dias de vida.";
+        }
+
+        protected void MultiView1_ActiveViewChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void ActionFromView1ToView2_Click(object sender, EventArgs e)
+        {
+            DefaultMultiview.ActiveViewIndex = 1;
+        }
+
+        protected void ActionFromView2ToView1_Click(object sender, EventArgs e)
+        {
+            DefaultMultiview.ActiveViewIndex = 0;
         }
     }
 }

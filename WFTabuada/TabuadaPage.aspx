@@ -91,6 +91,20 @@
                 </tr>
             </table>
             <asp:Label ID="LbResultMessage" runat="server"></asp:Label>
+            <br />
+            <br />
+            <asp:MultiView ID="DefaultMultiview" runat="server" OnActiveViewChanged="MultiView1_ActiveViewChanged">
+                <asp:View ID="View1" runat="server">
+                    <asp:Button ID="ActionFromView1ToView2" runat="server" OnClick="ActionFromView1ToView2_Click" Text="Ir para View 2" />
+                    <br />
+                    <asp:Literal ID="LoremIpsumSampler" runat="server" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."></asp:Literal>
+                </asp:View>
+                <asp:View ID="View2" runat="server">
+                    <asp:Button ID="ActionFromView2ToView1" runat="server" OnClick="ActionFromView2ToView1_Click" Text="Ir para View 1" />
+                    <br />
+                    <asp:Image ID="LoremIpsumImage" runat="server" ImageUrl="~/images/Lorem-Ipsum-alternatives-768x492.png" />
+                </asp:View>
+            </asp:MultiView>
         </div>
     </form>
 </body>
