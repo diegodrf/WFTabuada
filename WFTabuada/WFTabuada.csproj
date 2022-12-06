@@ -70,18 +70,33 @@
     <Content Include="images\menu_icon.png" />
     <Content Include="images\Lorem-Ipsum-alternatives-768x492.png" />
     <Content Include="pages\Index.aspx" />
+    <Content Include="pages\IndexPage.aspx" />
     <Content Include="pages\KnowingWizard.aspx" />
     <Content Include="pages\TabuadaPage.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebUserControl1.ascx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="pages\BasePage.Master.cs">
+      <DependentUpon>BasePage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\BasePage.Master.designer.cs">
+      <DependentUpon>BasePage.Master</DependentUpon>
+    </Compile>
     <Compile Include="pages\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="pages\Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\IndexPage.aspx.cs">
+      <DependentUpon>IndexPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\IndexPage.aspx.designer.cs">
+      <DependentUpon>IndexPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="pages\KnowingWizard.aspx.cs">
       <DependentUpon>KnowingWizard.aspx</DependentUpon>
@@ -108,6 +123,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="pages\BasePage.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
