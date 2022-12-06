@@ -67,18 +67,43 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="images\menu_icon.png" />
     <Content Include="images\Lorem-Ipsum-alternatives-768x492.png" />
-    <Content Include="TabuadaPage.aspx" />
+    <Content Include="pages\Index.aspx" />
+    <Content Include="pages\KnowingWizard.aspx" />
+    <Content Include="pages\TabuadaPage.aspx" />
     <Content Include="Web.config" />
+    <Content Include="WebUserControl1.ascx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="pages\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\KnowingWizard.aspx.cs">
+      <DependentUpon>KnowingWizard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\KnowingWizard.aspx.designer.cs">
+      <DependentUpon>KnowingWizard.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TabuadaPage.aspx.cs">
+    <Compile Include="pages\TabuadaPage.aspx.cs">
       <DependentUpon>TabuadaPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="TabuadaPage.aspx.designer.cs">
+    <Compile Include="pages\TabuadaPage.aspx.designer.cs">
       <DependentUpon>TabuadaPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControl1.ascx.cs">
+      <DependentUpon>WebUserControl1.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControl1.ascx.designer.cs">
+      <DependentUpon>WebUserControl1.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -89,6 +114,7 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="Web.sitemap" />
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>

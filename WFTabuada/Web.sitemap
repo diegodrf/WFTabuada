@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="~\pages\Index.aspx" title="Index"  description="Index page">
+    <siteMapNode url="~\pages\KnowingWizard.aspx" title="Wizard Page"  description="No description" />
+    <siteMapNode url="~\pages\TabuadaPage.aspx" title="Tabuada"  description="Pagina da tabuada" />
+  </siteMapNode>
+</siteMap>
